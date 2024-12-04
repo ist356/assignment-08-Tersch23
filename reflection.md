@@ -23,3 +23,5 @@ Examples:
 **Best Reflection** "I learned when to use while vs for loops. While loops are for sentiel-controlled values (waiting for a condition to occur), vs for loops are for iterating over collections of fixed values."
 
 `--- Reflection Below This Line ---`
+
+We did this in class it was very helpful to be ran through this because I think I will be using a lot of it on the final project. The streamlit and data pipeline visualizations were very helpful to learn in class. 
