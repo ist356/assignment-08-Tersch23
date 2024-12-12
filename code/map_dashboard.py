@@ -13,11 +13,17 @@ ZOOM = 14                   # zoom level
 VMIN = 1000                 # min value for color scale
 VMAX = 5000                 # max value for color scale
 
-
-cuse_map = folium.Map(location=CUSE, zoom_start=ZOOM)
 df = pd.read_csv('./cache/top_locations_mappable.csv')
-geodf = gpd.GeoDataFrame(df, geometry=gpd.points_from_xy(df.lon, df.lat))
-geodf.explore(m=cuse_map, marker_type="circle", vmin=VMIN, vmax=VMAX, 
-              marker_kwds={"radius": 10, "fill": True},
-              column='amount', cmap='magma', legend=True)
-sf.folium_static(cuse_map)
+
+st.title('Top Locations for Parking Tickets within Syracuse')
+st.caption('This dashboard shows the parking tickets that were issued in the top locations with $1,000 or more in total aggregate violation amounts.')
+
+gdf = gpd.GeoDataFrame(df, geometry=gpd.points_from_xy(df.lon, df.lat))
+m = folium.Map(location=CUSE, zoom_start=ZOOM)
+cuse_map = gdf.explore(gdf['amount'], m=m, 
+                       cmap="magma",vmin=VMIN, vmax=VMAX, 
+                       legend=True, legend_name='Amount',
+                       marker_type = "circle",
+                       marker_kwds = {"radius": 10, "fill": True},
+)
+sf.folium_static(cuse_map, width=800, height=600)
