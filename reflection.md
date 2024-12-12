@@ -25,4 +25,10 @@ Examples:
 `--- Reflection Below This Line ---`
 
 We did this in class it was very helpful to be ran through this because I think I will be using a lot of it on the final project. The streamlit and data pipeline visualizations were very helpful to learn in class. 
+In this project I leanred how to create a dashboard using geodataframe. in this HW assignment I learned how to make edits to the visualization, creating different leged options and starting points for the map and data frame. Doing this in class was very helpful in learning how to put different files together and make them work together in the same environment. 
+The parking tickets map was interactive, we learned how to filter the map depending on settings we wanted to see. The map was the last part of this HW assignment and it was helpful to see how it all went together by seting up the dataframe how we wanted and editing out information we did not need.
+I learned how to start with information, transform it, and end up at my final goal.
+
+
+
 Changing up this reflection to send another github commit.
